@@ -22,10 +22,10 @@ curl -i -X GET \
 
 
 
-RUN:
-npm i
+# RUN:
+npm i \
 ng build
-sudo npm run docker-build
-sudo npm run docker-run
+sudo npm run docker-build \
+sudo npm run docker-run \
 
-open browser on http://localhost:3000
+open browser on http://localhost:3000 \
