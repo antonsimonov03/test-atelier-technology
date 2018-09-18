@@ -23,7 +23,7 @@ export class ApiTokenInterceptor implements HttpInterceptor {
         }
 
         const authReq = req.clone({
-            headers: req.headers.set('Authorization', `${this.authService.getTokenType()} ${this.authService.getAccessToken()}}`)
+            headers: req.headers.set('Authorization', `${this.authService.getTokenType()} ${this.authService.getAccessToken()}`)
         });
 
         return next.handle(authReq);
